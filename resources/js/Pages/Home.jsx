@@ -31,11 +31,16 @@ export default function Home() {
                         <p>Register a new workstation.</p>
                     </Link>
 
-                    <div className="rounded-lg bg-slate-700 p-6 text-white">
+                    <Link
+                        to="/stations"
+                        className="rounded-lg bg-slate-700 p-6 text-white"
+                    >
                         <h2 className="text-xl font-bold">Station Details</h2>
 
-                        <p>Open a station from the Station List.</p>
-                    </div>
+                        <p>
+                            Select a station from the list to view its details.
+                        </p>
+                    </Link>
                 </div>
             </section>
         </main>
