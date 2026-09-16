@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('stations', function (Blueprint $table) {
             $table->id();
+
+            $table->string('station_name')->unique();
+
+            $table->enum('tier_category', [
+                'Regular',
+                'VIP',
+                'Streaming Room',
+            ]);
+
+            $table->decimal('hourly_rate', 8, 2);
+
             $table->timestamps();
         });
     }

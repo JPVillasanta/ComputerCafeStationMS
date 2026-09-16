@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
-    <title inertia>{{ config('app.name', 'Task Manager') }}</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Computer Cafe Station MS</title>
 
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
-    @inertiaHead
+    @vite([
+        'resources/css/app.css',
+        'resources/js/app.jsx',
+    ])
 </head>
 <body>
-    @inertia
+    <div id="root"></div>
 </body>
 </html>

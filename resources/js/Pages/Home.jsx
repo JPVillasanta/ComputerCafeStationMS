@@ -1,29 +1,43 @@
-import { Link } from '@inertiajs/react';
-import Navbar from '../Components/Navbar';
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-slate-100">
-            <Navbar />
+        <main className="mx-auto max-w-6xl p-6">
+            <section className="rounded-lg bg-white p-8 shadow">
+                <h1 className="mb-3 text-4xl font-bold">
+                    Computer Café Station Management
+                </h1>
 
-            <main className="mx-auto max-w-5xl p-6">
-                <section className="rounded-lg bg-white p-8 shadow">
-                    <h1 className="mb-3 text-4xl font-bold text-slate-800">
-                        Welcome to CRUD Task Manager
-                    </h1>
+                <p className="mb-8 text-slate-600">
+                    Manage the digital catalog of PC rental workstations.
+                </p>
 
-                    <p className="mb-6 text-slate-600">
-                        Create, view, update, and delete your tasks.
-                    </p>
+                <div className="grid gap-4 md:grid-cols-3">
+                    <Link
+                        to="/stations"
+                        className="rounded-lg bg-blue-600 p-6 text-white"
+                    >
+                        <h2 className="text-xl font-bold">Station List</h2>
+
+                        <p>View all café workstations.</p>
+                    </Link>
 
                     <Link
-                        href="/tasks"
-                        className="inline-block rounded bg-blue-600 px-5 py-3 text-white hover:bg-blue-700"
+                        to="/stations/create"
+                        className="rounded-lg bg-emerald-600 p-6 text-white"
                     >
-                        Open Task Manager
+                        <h2 className="text-xl font-bold">Add Station</h2>
+
+                        <p>Register a new workstation.</p>
                     </Link>
-                </section>
-            </main>
-        </div>
+
+                    <div className="rounded-lg bg-slate-700 p-6 text-white">
+                        <h2 className="text-xl font-bold">Station Details</h2>
+
+                        <p>Open a station from the Station List.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 }
